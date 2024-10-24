@@ -5,9 +5,7 @@ symbole = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Bube', 'Dame', 'König
 kartenstapel = [(farbe, symbol) for farbe in farben for symbol in symbole]
 
 def kartenZiehen(anzahl):
-    random.shuffle(kartenstapel)
-    gezogeneKarten = kartenstapel[:anzahl]  # die ersten "anzahl" von Karten werden gezogen
-    return gezogeneKarten
+    return random.sample(kartenstapel,anzahl)
 
 def wertefarben(hand):
     werte = [karte[1] for karte in hand]
