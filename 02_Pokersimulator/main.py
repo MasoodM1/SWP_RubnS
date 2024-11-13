@@ -5,7 +5,14 @@ symbole = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Bube', 'Dame', 'König
 kartenstapel = [(farbe, symbol) for farbe in farben for symbol in symbole]
 
 def kartenZiehen(anzahl):
-    return random.sample(kartenstapel,anzahl)
+    try:
+        hand = random.sample(kartenstapel,anzahl)
+    except:
+        print('Fehler beim Ziehen der Karten aufgetreten!')
+    else:
+        return hand
+#    finally:
+#        print('KartenZiehen wurde gestartet')
 
 def wertefarben(hand):
     werte = [karte[1] for karte in hand]
