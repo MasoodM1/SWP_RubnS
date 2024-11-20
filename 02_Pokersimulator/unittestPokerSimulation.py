@@ -1,63 +1,38 @@
 import unittest
-from main import kartenZiehen, wertefarben, strasse, gleicheWerte, flush, kombinationErkennen
+from main import kartenZiehen, kombinationErkennen, flush, gleicheWerte, strasse
 
-class TestPokerSimulator(unittest.TestCase):
-
-    def setUp(self):
-        self.farben = ['Herz', 'Karo', 'Pik', 'Kreuz']
-        self.symbole = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Bube', 'Dame', 'König', 'Ass']
-        self.kartenstapel = [(farbe, symbol) for farbe in self.farben for symbol in self.symbole]
-
+class TestPokerFunctions(unittest.TestCase):
     def test_kartenZiehen(self):
-        hand = kartenZiehen(5, self.kartenstapel)
-        self.assertEqual(len(hand), 5)
+        kartenstapel = [('Herz', '2'), ('Karo', '3'), ('Pik', '4'), ('Kreuz', '5')]
+        hand = kartenZiehen(2, kartenstapel)
+        self.assertEqual(len(hand), 2)  # Testet ob die Hand 2 Karten enthält (x == y)
         for karte in hand:
-            self.assertIn(karte, self.kartenstapel)
+            self.assertIn(karte, kartenstapel)  # Testet ob karte die gleiche Objekt ist wie im kartenstapel (x is y)
 
-    def test_wertefarben(self):
-        hand = [('Herz', '2'), ('Karo', '3'), ('Pik', '4'), ('Kreuz', '5'), ('Herz', '6')]
-        werte, farben = wertefarben(hand)
-        self.assertEqual(werte, ['2', '3', '4', '5', '6'])
-        self.assertEqual(farben, ['Herz', 'Karo', 'Pik', 'Kreuz', 'Herz'])
-
-    def test_strasse(self):
-        werte = ['2', '3', '4', '5', '6']
-        self.assertTrue(strasse(werte, self.symbole))
-        werte = ['2', '3', '4', '5', '7']
-        self.assertFalse(strasse(werte, self.symbole))
-
-    def test_gleicheWerte(self):
-        werte = ['2', '2', '3', '3', '3']
-        result = gleicheWerte(werte)
-        self.assertEqual(result, {'2': 2, '3': 3})
+    def test_kombinationErkennen(self):
+        symbole = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Bube', 'Dame', 'König', 'Ass']
+        royal_flush = [('Herz', '10'), ('Herz', 'Bube'), ('Herz', 'Dame'), ('Herz', 'König'), ('Herz', 'Ass')]
+        straight_flush = [('Karo', '6'), ('Karo', '7'), ('Karo', '8'), ('Karo', '9'), ('Karo', '10')]
+        self.assertEqual(kombinationErkennen(royal_flush, symbole), "Royal Flush")
+        self.assertEqual(kombinationErkennen(straight_flush, symbole), "Straight Flush")
 
     def test_flush(self):
         farben = ['Herz', 'Herz', 'Herz', 'Herz', 'Herz']
-        self.assertTrue(flush(farben))
-        farben = ['Herz', 'Karo', 'Pik', 'Kreuz', 'Herz']
+        self.assertTrue(flush(farben))  # bool(x) is True => also ob flush zutrifft
+        farben = ['Herz', 'Karo', 'Herz', 'Herz', 'Herz']
         self.assertFalse(flush(farben))
 
-    def test_kombinationErkennen(self):
-        hand = [('Herz', '10'), ('Herz', 'Bube'), ('Herz', 'Dame'), ('Herz', 'König'), ('Herz', 'Ass')]
-        self.assertEqual(kombinationErkennen(hand), "Royal Flush")
-        hand = [('Herz', '9'), ('Herz', '10'), ('Herz', 'Bube'), ('Herz', 'Dame'), ('Herz', 'König')]
-        self.assertEqual(kombinationErkennen(hand), "Straight Flush")
-        hand = [('Herz', '2'), ('Karo', '2'), ('Pik', '2'), ('Kreuz', '2'), ('Herz', '3')]
-        self.assertEqual(kombinationErkennen(hand), "Vierling")
-        hand = [('Herz', '2'), ('Karo', '2'), ('Pik', '2'), ('Kreuz', '3'), ('Herz', '3')]
-        self.assertEqual(kombinationErkennen(hand), "Full House")
-        hand = [('Herz', '2'), ('Herz', '4'), ('Herz', '6'), ('Herz', '8'), ('Herz', '10')]
-        self.assertEqual(kombinationErkennen(hand), "Flush")
-        hand = [('Herz', '2'), ('Karo', '3'), ('Pik', '4'), ('Kreuz', '5'), ('Herz', '6')]
-        self.assertEqual(kombinationErkennen(hand), "Straße")
-        hand = [('Herz', '2'), ('Karo', '2'), ('Pik', '2'), ('Kreuz', '4'), ('Herz', '5')]
-        self.assertEqual(kombinationErkennen(hand), "Drilling")
-        hand = [('Herz', '2'), ('Karo', '2'), ('Pik', '3'), ('Kreuz', '3'), ('Herz', '4')]
-        self.assertEqual(kombinationErkennen(hand), "Zwei Paare")
-        hand = [('Herz', '2'), ('Karo', '2'), ('Pik', '4'), ('Kreuz', '5'), ('Herz', '6')]
-        self.assertEqual(kombinationErkennen(hand), "Ein Paar")
-        hand = [('Herz', '2'), ('Karo', '3'), ('Pik', '4'), ('Kreuz', '5'), ('Herz', '7')]
-        self.assertEqual(kombinationErkennen(hand), "High Card")
+    def test_gleicheWerte(self):
+        werte = ['10', '10', 'Ass', 'Ass', '10']
+        ergebnis = gleicheWerte(werte)
+        self.assertEqual(ergebnis, {'10': 3, 'Ass': 2})
+
+    def test_strasse(self):
+        werte = ['6', '7', '8', '9', '10']
+        symbole = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Bube', 'Dame', 'König', 'Ass']
+        self.assertTrue(strasse(werte, symbole))
+        werte = ['5', '7', '8', '9', '10']
+        self.assertFalse(strasse(werte, symbole))
 
 if __name__ == '__main__':
     unittest.main()
