@@ -1,0 +1,87 @@
+<mxfile host="Electron" modified="2024-12-05T08:37:35.649Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="K343O9tBBYqGqB7ecDli" version="21.1.2" type="device">
+  <diagram name="Seite-1" id="60rLIO8ZhsoEkmhaTLOs">
+    <mxGraphModel dx="1218" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-5" value="Firma" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="250" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-6" value="+ abteilungen: List[Abteilung]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-5">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-5">
+          <mxGeometry y="52" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-8" value="+ __init__()&lt;br&gt;+ add_abteilung(abteilung: &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Abteilung)&lt;br&gt;+ anzahl_mitarbeiter(): int&lt;br&gt;+ anzahl_abteilungsleiter(): int&lt;br&gt;+ anzahl_abteilung(): int&lt;br&gt;+ groesste_abteilung(): Abteilung&lt;br&gt;+ geschlechterverhaeltnis(): &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Tuple[float, float]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-5">
+          <mxGeometry y="60" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PWXTdh4zEilfZJZDhLZ1-9" target="PWXTdh4zEilfZJZDhLZ1-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-9" value="Person" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="573" width="200" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-10" value="+ gender: str&lt;br&gt;+ name: str" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-9">
+          <mxGeometry y="26" width="200" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-9">
+          <mxGeometry y="60" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-12" value="+ __init__(name: str, gender: str)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-9">
+          <mxGeometry y="68" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PWXTdh4zEilfZJZDhLZ1-13" target="PWXTdh4zEilfZJZDhLZ1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PWXTdh4zEilfZJZDhLZ1-13" target="PWXTdh4zEilfZJZDhLZ1-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-13" value="Mitarbeiter" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="570" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-14" value="+ abteilung: Abteilung" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-13">
+          <mxGeometry y="26" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-13">
+          <mxGeometry y="52" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-16" value="+ __init__(name: str, gender: str, &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;abteilung: Abteilung)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-13">
+          <mxGeometry y="60" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PWXTdh4zEilfZJZDhLZ1-17" target="PWXTdh4zEilfZJZDhLZ1-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="520" />
+              <mxPoint x="460" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-17" value="Abteilungsleiter" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="580" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-17">
+          <mxGeometry y="26" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-20" value="+ __init__(name: str, gender: str, &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;abteilung: Abteilung)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-17">
+          <mxGeometry y="34" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PWXTdh4zEilfZJZDhLZ1-21" target="PWXTdh4zEilfZJZDhLZ1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-21" value="Abteilung" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="265" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-22" value="+ name: str&lt;br&gt;+ mitarbeiter: List[Mitarbeiter]&lt;br&gt;+ leiter: Abteilungsleiter" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-21">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-21">
+          <mxGeometry y="80" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="PWXTdh4zEilfZJZDhLZ1-24" value="+ __init__(name: str)&lt;br&gt;+ set_leiter(leiter: Abteilungsleiter)&lt;br&gt;+ add_mitarbeiter(mitarbeiter: &lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Mitarbeiter)&lt;br&gt;+ anzahl_mitarbeiter(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="PWXTdh4zEilfZJZDhLZ1-21">
+          <mxGeometry y="88" width="200" height="82" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
