@@ -48,7 +48,7 @@ class Auto:
     def __repr__(self):
         return f"Auto({self.ps})"
 
-# Testfälle im Hauptprogramm
+
 def main():
     a1 = Auto(50)
     a2 = Auto(60)
