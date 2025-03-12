@@ -1,0 +1,17 @@
+Programmiere mit Python, die einfach verkettete Liste als Datenstruktur.
+
+Folgende Anforderungen sind gegeben:
+- Datenstruktur als Objekt instanzierbar
+- Ganzahl-werte als Werte der Datenstruktur
+- programmiere Methode "am Ende Hinzufügen"
+- programmiere Ausgabe Länge der Datenstruktur
+- Ausgabe aller Elemente
+- main mit exemplarischen (Zufallszahlen) Befüllen
+- iterator protokoll implementieren
+
+PS: so würde mans in JAVA machen
+https://javabeginners.de/Sammlungen_und_Listen/Einfach_verkettete_Liste.php
+
+ABGABE bis spätestens: 2025.03.13
+GIT!
+
